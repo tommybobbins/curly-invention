@@ -1,6 +1,12 @@
 # EKS Managed Node Group Example
 
 ```
+$ tofu init
+$ tofu plan
+$ tofu apply
+```
+
+```
 $ aws eks --region eu-west-2 update-kubeconfig --name $(aws eks list-clusters --region=eu-west-2 --query 'clusters[]' --output text)
 Added new context arn:aws:eks:eu-west-2:1234567789:cluster/ex-curly-invention to ~/.kube/config
 $ kubectl get nodes
